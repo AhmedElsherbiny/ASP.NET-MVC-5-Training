@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SportsModelsPlayerDbContextModelStoreContainer" CdmEntityContainer="SportClubEntities">
+    <EntitySetMapping Name="HighBoardClubMembers">
+      <EntityTypeMapping TypeName="Sports.Models.PlayerDbContextModel.HighBoardClubMember">
+        <MappingFragment StoreEntitySet="HighBoardClubMember">
+          <ScalarProperty Name="HighBoardMembers" ColumnName="HighBoardMembers" />
+          <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Matches">
+      <EntityTypeMapping TypeName="Sports.Models.PlayerDbContextModel.Match">
+        <MappingFragment StoreEntitySet="Match">
+          <ScalarProperty Name="MatchID" ColumnName="MatchID" />
+          <ScalarProperty Name="HostedTeamID" ColumnName="HostedTeamID" />
+          <ScalarProperty Name="VisitorTeamID" ColumnName="VisitorTeamID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Players">
+      <EntityTypeMapping TypeName="Sports.Models.PlayerDbContextModel.Player">
+        <MappingFragment StoreEntitySet="Player">
+          <ScalarProperty Name="PlayerID" ColumnName="PlayerID" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sports">
+      <EntityTypeMapping TypeName="Sports.Models.PlayerDbContextModel.Sport">
+        <MappingFragment StoreEntitySet="Sport">
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teams">
+      <EntityTypeMapping TypeName="Sports.Models.PlayerDbContextModel.Team">
+        <MappingFragment StoreEntitySet="Team">
+          <ScalarProperty Name="TeamID" ColumnName="TeamID" />
+          <ScalarProperty Name="SportID" ColumnName="SportID" />
+          <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PlayersNumber" ColumnName="PlayersNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clubs">
+      <EntityTypeMapping TypeName="Sports.Models.PlayerDbContextModel.Club">
+        <MappingFragment StoreEntitySet="Club">
+          <ScalarProperty Name="Logo" ColumnName="Logo" />
+          <ScalarProperty Name="EstablishDate" ColumnName="EstablishDate" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="SportClub" TypeName="Sports.Models.PlayerDbContextModel.SportClub" StoreEntitySet="SportClub">
+      <EndProperty Name="Sport">
+        <ScalarProperty Name="SportID" ColumnName="SportID" />
+      </EndProperty>
+      <EndProperty Name="Club">
+        <ScalarProperty Name="ClubID" ColumnName="ClubID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

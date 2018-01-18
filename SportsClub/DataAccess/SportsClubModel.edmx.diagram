@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e003d5a4227a4af3a41ac95c8eb30feb" Name="Diagram1">
+        <EntityTypeShape EntityType="Sports.Models.PlayerDbContextModel.HighBoardClubMember" Width="1.5" PointX="3" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sports.Models.PlayerDbContextModel.Match" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sports.Models.PlayerDbContextModel.Player" Width="1.5" PointX="7.5" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sports.Models.PlayerDbContextModel.Sport" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Sports.Models.PlayerDbContextModel.Team" Width="1.5" PointX="5.25" PointY="5.625" IsExpanded="true" />
+        <AssociationConnector Association="Sports.Models.PlayerDbContextModel.FK_Matchs_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="Sports.Models.PlayerDbContextModel.FK_Matchs_Teams1" ManuallyRouted="false" />
+        <AssociationConnector Association="Sports.Models.PlayerDbContextModel.FK_Players_Teams" ManuallyRouted="false" />
+        <AssociationConnector Association="Sports.Models.PlayerDbContextModel.FK_Teams_Sports" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Sports.Models.PlayerDbContextModel.Club" Width="1.5" PointX="0.75" PointY="5.375" />
+        <AssociationConnector Association="Sports.Models.PlayerDbContextModel.FK_HighBoardClubMembers_Clubs" />
+        <AssociationConnector Association="Sports.Models.PlayerDbContextModel.FK_Teams_Clubs" />
+        <AssociationConnector Association="Sports.Models.PlayerDbContextModel.SportClub" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
