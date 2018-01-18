@@ -1,5 +1,6 @@
-﻿@model IEnumerable<SportsClub.DataAccess.Sport>
-
+﻿@model IPagedList<SportsClub.DataAccess.Sport>
+@using PagedList;
+@using PagedList.Mvc;
 @{
     ViewBag.Title = "Sports";
 }
@@ -17,7 +18,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.First().Name)
         </th>
         <th></th>
     </tr>
@@ -36,3 +37,4 @@
 }
 
 </table>
+@Html.PagedListPager(Model, page => Url.Action("Index", new { page, Search = Request.QueryString["Search"] }), new PagedListRenderOptions() { Display = PagedListDisplayMode.Always, DisplayPageCountAndCurrentLocation = true })

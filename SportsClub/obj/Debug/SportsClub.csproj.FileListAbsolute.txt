@@ -28,3 +28,7 @@ e:\OnlineShoppingCart\SportsClub\SportsClub\bin\Newtonsoft.Json.xml
 e:\OnlineShoppingCart\SportsClub\SportsClub\obj\Debug\SportsClub.csprojResolveAssemblyReference.cache
 e:\OnlineShoppingCart\SportsClub\SportsClub\obj\Debug\SportsClub.dll
 e:\OnlineShoppingCart\SportsClub\SportsClub\obj\Debug\SportsClub.pdb
+E:\OnlineShoppingCart\SportsClub\SportsClub\bin\PagedList.dll
+E:\OnlineShoppingCart\SportsClub\SportsClub\bin\PagedList.Mvc.dll
+E:\OnlineShoppingCart\SportsClub\SportsClub\bin\PagedList.xml
+E:\OnlineShoppingCart\SportsClub\SportsClub\bin\PagedList.Mvc.xml

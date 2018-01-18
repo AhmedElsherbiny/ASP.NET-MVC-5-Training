@@ -7,7 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SportsClub.DataAccess;
-
+using PagedList;
+using PagedList.Mvc;
 namespace SportsClub.Controllers
 {
     public class MatchesController : Controller
@@ -33,7 +34,7 @@ namespace SportsClub.Controllers
 
         }
         // GET: Matches
-        public ActionResult Index(string SearchString)
+        public ActionResult Index(string SearchString , int? page)
         {
             var matches = db.Matches.Include(m => m.Team).Include(m => m.Team1);
              matches = from m in db.Matches
@@ -46,8 +47,8 @@ namespace SportsClub.Controllers
                 }
                 matches = matches.Where(m => m.Team.Club.Sports.Any(s => s.Name.Contains(SearchString)) || m.Team.Club.Name.Contains(SearchString) || m.Date == dt);
             }
-    
-            return View(matches.ToList());
+
+            return View(matches.ToList().ToPagedList(page ?? 1, 3));
         }
 
         // GET: Matches/Details/5

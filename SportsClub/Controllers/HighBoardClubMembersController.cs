@@ -7,7 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SportsClub.DataAccess;
-
+using PagedList;
+using PagedList.Mvc;
 namespace SportsClub.Controllers
 {
     public class HighBoardClubMembersController : Controller
@@ -15,10 +16,10 @@ namespace SportsClub.Controllers
         private SportClubEntities db = new SportClubEntities();
 
         // GET: HighBoardClubMembers
-        public ActionResult Index()
+        public ActionResult Index(int? page)
         {
             var highBoardClubMembers = db.HighBoardClubMembers.Include(h => h.Club);
-            return View(highBoardClubMembers.ToList());
+            return View(highBoardClubMembers.ToList().ToPagedList(page ?? 1, 3));
         }
 
         // GET: HighBoardClubMembers/Details/5
